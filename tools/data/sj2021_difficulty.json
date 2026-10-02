@@ -1,0 +1,32 @@
+{
+  "_source": "https://celeste.ink/wiki/Strawberry_Jam_Collab/<Lobby>_Lobby （Celeste Wiki，各大厅页面）。颜色=该大厅内的相对难度；爆=Grandmaster 大厅的 cracked 地图。",
+  "Beginner": {
+    "绿": ["Forest Path", "Azure Caverns", "Loopy Lagoon", "Collapsing Skyline", "Seeing Is Believing"],
+    "黄": ["If My 'Driveway' Almost Did You In...", "Cassette Cliffs", "Over the City", "Troposphere", "Potential for Anything", "Midnight Spire", "paint", "Rose Garden", "Treehive", "The Squeeze"],
+    "红": ["Soap", "Switchtube Vista", "A Gift From the Stars", "Strawberry Orchard", "Dropzle", "Coresaken City"]
+  },
+  "Intermediate": {
+    "绿": ["Sleeping Under Stars", "Frosted Fragments", "Fifth Dimension", "Low-G Botany", "Sea of Soup"],
+    "黄": ["Vertigo", "EAT GIRL", "Honeyzip Inc.", "In Filtration", "Supernautica", "The Tower", "Construction Conundrum"],
+    "红": ["Square the Circle", "Deep Blue", "Temple of a Thousand Skies", "Midnight Monsoon", "Pufferfish Transportation Co.", "Pointless Machines"]
+  },
+  "Advanced": {
+    "绿": ["Sands of Time", "Slime Time!", "Lethal Laser Laboratory", "Starry Ruins", "Undergrowth", "Lost Woods"],
+    "黄": ["Jellyfish Sanctum", "Tectonic Trenches", "Golden Dawn", "Forest Rush", "Attack of the Clone", "Bee Berserk", "Java's Crypt", "Raindrops on Roses"],
+    "红": ["Toggle Theory", "Superstructure", "The Tower (XVI)", "Starlight Station", "Dusk City", "Synapse", "The Lab", "Belated Valentine's Day", "Thinking with Portals", "Rightside-Down Cavern", "Call of the Void"]
+  },
+  "Expert": {
+    "绿": ["Flying Battery", "The Core Problem", "Overgrown Linn", "Hydroshock", "Subway Neon", "Meaningless Contraptions", "Golden Alleyway", "System.InvalidMapException"],
+    "黄": ["A Change in Direction", "Skyline Usurper", "Clockwork", "Plasma Reactor", "FLOATING POINT", "Storm Runner", "Time Trouble", "Hypnagogia", "Ethereal Ascension", "Vinculum", "Mosaic Garden", "Lunar Pagoda", "Caper Cavortion", "Madeline: The Bubble"],
+    "红": ["Chromatic Complex", "Fortress Fall", "Psychokinetic", "Garden of Khu'tara", "Narrow Hollow", "Summit Down-Side", "Polaris"]
+  },
+  "Grandmaster": {
+    "绿": ["Flipside Cliffside", "Lava Layer", "kevintechspam.bin", "Fractured Iridescence"],
+    "黄": ["Superluminary", "Belly of the Beast", "Cycle Madness B-Side", "Cave of the Crimson Sky", "Drifting Deep"],
+    "红": ["World Abyss", "Stellar Odyssey", "74", "Shattersong", "summit"],
+    "爆": ["Ivory", "Pinball Purgatory", "The Solar Express", "Nelumbo"]
+  },
+  "heartside": {
+    "Grandmaster": "+1"
+  }
+}

@@ -6,7 +6,7 @@ from astrbot.api.message_components import Image, Plain, Reply
 from astrbot.api.star import Context, Star, StarTools, register
 from astrbot.core.star.filter.command import GreedyStr
 
-from .celebot.db import DIFFICULTIES, MapDB, MapEntry, normalize_difficulty
+from .celebot.db import MapDB, MapEntry, parse_difficulty_filter
 
 SEED_DIR = Path(__file__).parent / "seed"
 PAGE_SIZE = 15
@@ -44,8 +44,8 @@ class CeleBot(Star):
     def _format(self, m: MapEntry) -> str:
         title = m.name if not m.name_en or m.name_en == m.name else f"{m.name}（{m.name_en}）"
         lines = [f"#{m.id} {title}", f"合集：{self._collection_name(m.collection)}"]
-        if m.difficulty:
-            lines.append(f"难度：{m.difficulty}")
+        if m.difficulty_label:
+            lines.append(f"难度：{m.difficulty_label}")
         if m.author:
             lines.append(f"作者：{m.author}")
         if m.tags:
@@ -55,7 +55,7 @@ class CeleBot(Star):
         return "\n".join(lines)
 
     def _one_line(self, m: MapEntry) -> str:
-        extra = f" [{m.difficulty}]" if m.difficulty else ""
+        extra = f" [{m.difficulty_label}]" if m.difficulty_label else ""
         en = f" / {m.name_en}" if m.name_en and m.name_en != m.name else ""
         return f"#{m.id} {m.name}{en}{extra}"
 
@@ -97,30 +97,31 @@ class CeleBot(Star):
 
     @filter.command("合集地图")
     async def list_collection_maps(self, event: AstrMessageEvent, args: GreedyStr):
-        """列出合集内的地图。用法：/合集地图 <合集> [难度] [页码]"""
+        """列出合集内的地图。用法：/合集地图 <合集> [难度] [细分难度(绿/黄/红/爆/gm+2)] [页码]"""
         tokens = args.split()
         if not tokens:
-            yield event.plain_result("用法：/合集地图 <合集> [难度] [页码]")
+            yield event.plain_result("用法：/合集地图 <合集> [难度] [细分难度] [页码]，如 /合集地图 草莓酱 gm 红")
             return
         coll = self.db.find_collection(tokens[0])
         if not coll:
             yield event.plain_result(f"合集「{tokens[0]}」不存在，可用 /合集 查看。")
             return
-        page, difficulty = 1, None
+        page, difficulty, sub = 1, None, None
         for t in tokens[1:]:
             if t.isdigit():
                 page = max(1, int(t))
                 continue
             try:
-                difficulty = normalize_difficulty(t)
+                d, s = parse_difficulty_filter(t)
             except ValueError as e:
                 yield event.plain_result(str(e))
                 return
-        maps = self.db.list_maps(coll.key, difficulty)
+            difficulty, sub = d or difficulty, s or sub
+        maps = self.db.list_maps(coll.key, difficulty, sub)
         pages = max(1, -(-len(maps) // PAGE_SIZE))
         page = min(page, pages)
         chunk = maps[(page - 1) * PAGE_SIZE : page * PAGE_SIZE]
-        head = f"{coll.name}" + (f" · {difficulty}" if difficulty else "") + f"（第 {page}/{pages} 页，共 {len(maps)} 张）"
+        head = f"{coll.name}" + (f" · {' '.join(x for x in (difficulty, sub) if x)}" if difficulty or sub else "") + f"（第 {page}/{pages} 页，共 {len(maps)} 张）"
         yield event.plain_result("\n".join([head] + [self._one_line(m) for m in chunk]))
 
     # ---------- 编辑（需授权）----------
@@ -129,18 +130,18 @@ class CeleBot(Star):
 
     @filter.command("地图添加")
     async def add_map(self, event: AstrMessageEvent, args: GreedyStr):
-        """添加地图。用法：/地图添加 <合集> <名称> [en=英文名] [alias=别名1,别名2] [diff=难度] [tag=标签1,标签2] [author=作者]"""
+        """添加地图。用法：/地图添加 <合集> <名称> [en=英文名] [alias=别名1,别名2] [diff=难度] [sub=细分难度] [tag=标签1,标签2] [author=作者]"""
         if not self._is_editor(event):
             yield await self._deny(event)
             return
         tokens = args.split()
         if len(tokens) < 2:
-            yield event.plain_result("用法：/地图添加 <合集> <名称> [en=..] [alias=a,b] [diff=难度] [tag=a,b] [author=..]")
+            yield event.plain_result("用法：/地图添加 <合集> <名称> [en=..] [alias=a,b] [diff=难度] [sub=细分] [tag=a,b] [author=..]")
             return
         name_parts, opts = [], {}
         for t in tokens[1:]:
             k, sep, v = t.partition("=")
-            if sep and k in ("en", "alias", "diff", "tag", "author"):
+            if sep and k in ("en", "alias", "diff", "sub", "tag", "author"):
                 opts[k] = v
             elif not opts:
                 name_parts.append(t)
@@ -150,7 +151,7 @@ class CeleBot(Star):
         try:
             m = self.db.add_map(
                 " ".join(name_parts), tokens[0], name_en=opts.get("en", ""), aliases=_split_list(opts.get("alias", "")),
-                difficulty=opts.get("diff"), tags=_split_list(opts.get("tag", "")), author=opts.get("author", ""),
+                difficulty=opts.get("diff"), sub_difficulty=opts.get("sub"), tags=_split_list(opts.get("tag", "")), author=opts.get("author", ""),
                 user=str(event.get_sender_id()),
             )
         except ValueError as e:
@@ -160,7 +161,7 @@ class CeleBot(Star):
 
     @filter.command("地图修改")
     async def edit_map(self, event: AstrMessageEvent, map_id: int, field: str, value: GreedyStr):
-        """修改字段。用法：/地图修改 <编号> <name|name_en|difficulty|author|collection> <新值>（difficulty 填 - 清空）"""
+        """修改字段。用法：/地图修改 <编号> <name|name_en|difficulty|sub_difficulty|author|collection> <新值>（也可用 名称/英文名/难度/细分/作者/合集；难度、细分填 - 清空）"""
         if not self._is_editor(event):
             yield await self._deny(event)
             return

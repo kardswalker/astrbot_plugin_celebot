@@ -22,6 +22,16 @@ DIFFICULTY_ALIASES = {
     "大师": "Grandmaster", "宗师": "Grandmaster", "grandmaster": "Grandmaster", "gm": "Grandmaster",
 }
 
+# 细分难度：绿/黄/红是大厅内的相对难度，爆(cracked)为 Grandmaster 特有，+N 表示超出该档（GM+1、GM+2…）
+SUB_DIFFICULTIES = ["绿", "黄", "红", "爆"]
+SUB_ALIASES = {
+    "绿": "绿", "绿色": "绿", "green": "绿",
+    "黄": "黄", "黄色": "黄", "yellow": "黄",
+    "红": "红", "红色": "红", "red": "红",
+    "爆": "爆", "cracked": "爆", "crack": "爆",
+}
+_PLUS = re.compile(r"^(?:(gm|grandmaster)\s*)?\+(\d*)$", re.I)
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS collections (
     key TEXT PRIMARY KEY,
@@ -35,6 +45,7 @@ CREATE TABLE IF NOT EXISTS maps (
     name_en TEXT NOT NULL DEFAULT '',
     aliases TEXT NOT NULL DEFAULT '[]',
     difficulty TEXT,
+    sub_difficulty TEXT,
     tags TEXT NOT NULL DEFAULT '[]',
     icon TEXT,
     collection TEXT NOT NULL REFERENCES collections(key),
@@ -138,6 +149,7 @@ class MapEntry:
     name_en: str
     aliases: list[str]
     difficulty: str | None
+    sub_difficulty: str | None
     tags: list[str]
     icon: str | None
     collection: str
@@ -149,12 +161,20 @@ class MapEntry:
     def names(self) -> list[str]:
         return [self.name, self.name_en, *self.aliases]
 
+    @property
+    def difficulty_label(self) -> str:
+        """展示用难度，如 `Grandmaster 红`、`Grandmaster+1`；都没有时为空串。"""
+        d, sub = self.difficulty or "", self.sub_difficulty or ""
+        if d and sub:
+            return f"{d}{sub}" if sub.startswith("+") else f"{d} {sub}"
+        return d or sub
+
 
 def _row_to_map(r: sqlite3.Row) -> MapEntry:
     return MapEntry(
         id=r["id"], name=r["name"], name_en=r["name_en"],
         aliases=json.loads(r["aliases"]), difficulty=r["difficulty"],
-        tags=json.loads(r["tags"]), icon=r["icon"], collection=r["collection"],
+        sub_difficulty=r["sub_difficulty"], tags=json.loads(r["tags"]), icon=r["icon"], collection=r["collection"],
         author=r["author"], sid=r["sid"], updated_by=r["updated_by"], updated_at=r["updated_at"],
     )
 
@@ -169,9 +189,36 @@ def normalize_difficulty(value: str | None) -> str | None:
     raise ValueError(f"未知难度「{v}」，可用：" + " / ".join(DIFFICULTIES))
 
 
+def normalize_sub_difficulty(value: str | None) -> str | None:
+    """规范化细分难度：绿/黄/红/爆，或 +N（`+` 等同 `+1`）。空、`-` 表示清除。"""
+    if value is None or not value.strip() or value.strip() in ("-", "无", "none"):
+        return None
+    v = value.strip()
+    if v.lower() in SUB_ALIASES:
+        return SUB_ALIASES[v.lower()]
+    m = _PLUS.match(v)
+    if m:
+        return f"+{int(m.group(2) or 1)}"
+    raise ValueError(f"未知细分难度「{v}」，可用：" + " / ".join(SUB_DIFFICULTIES) + " / +1 / +2 …")
+
+
+def parse_difficulty_filter(token: str) -> tuple[str | None, str | None]:
+    """把 `专家` / `红` / `爆` / `gm+2` 解析为 (难度, 细分难度)；无法识别时抛 ValueError。"""
+    m = _PLUS.match(token)
+    if m:
+        return ("Grandmaster" if m.group(1) else None), f"+{int(m.group(2) or 1)}"
+    if token.lower() in SUB_ALIASES:
+        return None, SUB_ALIASES[token.lower()]
+    return normalize_difficulty(token), None
+
+
 class MapDB:
     # 允许通过 edit 修改的字段
-    EDITABLE = ("name", "name_en", "difficulty", "author", "collection")
+    EDITABLE = ("name", "name_en", "difficulty", "sub_difficulty", "author", "collection")
+    # 编辑字段的中文/简写别名
+    FIELD_ALIASES = {"名称": "name", "中文名": "name", "英文名": "name_en", "en": "name_en", "难度": "difficulty",
+                     "diff": "difficulty", "细分": "sub_difficulty", "细分难度": "sub_difficulty",
+                     "sub": "sub_difficulty", "作者": "author", "合集": "collection"}
 
     def __init__(self, data_dir: Path):
         self.data_dir = Path(data_dir)
@@ -180,6 +227,8 @@ class MapDB:
         self.conn = sqlite3.connect(self.data_dir / "maps.db")
         self.conn.row_factory = sqlite3.Row
         self.conn.executescript(SCHEMA)
+        if "sub_difficulty" not in {r["name"] for r in self.conn.execute("PRAGMA table_info(maps)")}:
+            self.conn.execute("ALTER TABLE maps ADD COLUMN sub_difficulty TEXT")  # 旧版本数据库升级
         self.conn.commit()
 
     def close(self) -> None:
@@ -205,10 +254,10 @@ class MapDB:
                 )
             for m in data["maps"]:
                 self.conn.execute(
-                    "INSERT OR IGNORE INTO maps (name,name_en,aliases,difficulty,tags,icon,collection,author,sid,updated_by,updated_at)"
-                    " VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT OR IGNORE INTO maps (name,name_en,aliases,difficulty,sub_difficulty,tags,icon,collection,author,sid,updated_by,updated_at)"
+                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
                     (m["name"], m.get("name_en", ""), json.dumps(m.get("aliases", []), ensure_ascii=False),
-                     m.get("difficulty"), json.dumps(m.get("tags", []), ensure_ascii=False), m.get("icon"),
+                     m.get("difficulty"), m.get("sub_difficulty"), json.dumps(m.get("tags", []), ensure_ascii=False), m.get("icon"),
                      m["collection"], m.get("author", ""), m.get("sid"), "seed", int(time.time())),
                 )
         return len(data["maps"])
@@ -240,15 +289,19 @@ class MapDB:
         r = self.conn.execute("SELECT * FROM maps WHERE id=?", (map_id,)).fetchone()
         return _row_to_map(r) if r else None
 
-    def list_maps(self, collection: str | None = None, difficulty: str | None = None) -> list[MapEntry]:
+    def list_maps(self, collection: str | None = None, difficulty: str | None = None,
+                  sub_difficulty: str | None = None) -> list[MapEntry]:
         sql, args = "SELECT * FROM maps WHERE 1=1", []
         if collection:
             sql += " AND collection=?"; args.append(collection)
         if difficulty:
             sql += " AND difficulty=?"; args.append(difficulty)
+        if sub_difficulty:
+            sql += " AND sub_difficulty=?"; args.append(sub_difficulty)
         return [_row_to_map(r) for r in self.conn.execute(sql + " ORDER BY id", args)]
 
-    def search(self, query: str, collection: str | None = None, limit: int = 10) -> list[MapEntry]:
+    def search(self, query: str, collection: str | None = None, limit: int = 10,
+               use_filters: bool = True) -> list[MapEntry]:
         """模糊搜索，返回按匹配度降序的结果。
 
         支持：名称/别名/作者的包含与前缀匹配、多关键词、错别字与漏字（bigram 相似度、子序列）、
@@ -262,21 +315,60 @@ class MapDB:
                     collection = c.key
                     tokens.remove(t)
                     break
+        pool = self.list_maps(collection)
+        # 完全等于某个标签/难度/细分难度的关键词（专家、gm、红、爆、gm+2…）作为过滤条件，而不是参与名称匹配。
+        # 若按条件过滤后一张都没有（比如在搜名为 "Red Horizon" 的图），就退回为普通文本搜索。
+        known_tags = {norm(t) for m in pool for t in m.tags}
+        want_tags: set[str] = set()
+        want_diff: set[str] = set()
+        want_sub: set[str] = set()
+        rest: list[str] = []
+        filtering = False
+        for t in tokens:
+            nt, low = norm(t), t.lower()
+            plus = _PLUS.match(t)
+            if plus:
+                want_sub.add(f"+{int(plus.group(2) or 1)}")
+                if plus.group(1):
+                    want_diff.add("Grandmaster")
+            elif low in SUB_ALIASES:
+                want_sub.add(SUB_ALIASES[low])
+            elif nt in known_tags:
+                want_tags.add(nt)
+            elif len(nt) >= 2 and low in DIFFICULTY_ALIASES:
+                want_diff.add(DIFFICULTY_ALIASES[low])
+            else:
+                rest.append(t)
+        if use_filters and (want_tags or want_diff or want_sub):
+            filtered = [
+                m for m in pool
+                if want_tags <= {norm(t) for t in m.tags}
+                and (not want_diff or m.difficulty in want_diff)
+                and (not want_sub or m.sub_difficulty in want_sub)
+            ]
+            if filtered and not rest:
+                return filtered[:limit]
+            if filtered:
+                pool, tokens = filtered, rest
+                filtering = True
         q = norm("".join(tokens))
         if not q:
             return []
         scored: list[tuple[float, MapEntry]] = []
-        for m in self.list_maps(collection):
+        for m in pool:
             best = max((_score(q, tokens, n) for n in m.names() if n), default=0.0)
             if m.author:
                 best = max(best, _score(q, tokens, m.author) * 0.6)
             if best >= MIN_SCORE:
                 scored.append((best, m))
+        if not scored and filtering:  # 过滤后文字一个都对不上：把条件词当作名称的一部分重搜（如 "red horizon"）
+            return self.search(query, collection, limit, use_filters=False)
         scored.sort(key=lambda x: (-x[0], x[1].id))
         return [m for _, m in scored[:limit]]
 
     def add_map(self, name: str, collection: str, *, name_en: str = "", aliases: list[str] | None = None,
-                difficulty: str | None = None, tags: list[str] | None = None, author: str = "",
+                difficulty: str | None = None, sub_difficulty: str | None = None,
+                tags: list[str] | None = None, author: str = "",
                 icon: str | None = None, user: str = "") -> MapEntry:
         if not name.strip():
             raise ValueError("地图名称不能为空")
@@ -285,10 +377,10 @@ class MapDB:
             raise ValueError(f"合集「{collection}」不存在")
         with self.conn:
             cur = self.conn.execute(
-                "INSERT INTO maps (name,name_en,aliases,difficulty,tags,icon,collection,author,updated_by,updated_at)"
-                " VALUES (?,?,?,?,?,?,?,?,?,?)",
+                "INSERT INTO maps (name,name_en,aliases,difficulty,sub_difficulty,tags,icon,collection,author,updated_by,updated_at)"
+                " VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                 (name.strip(), name_en, json.dumps(aliases or [], ensure_ascii=False), normalize_difficulty(difficulty),
-                 json.dumps(tags or [], ensure_ascii=False), icon, coll.key, author, user, int(time.time())),
+                 normalize_sub_difficulty(sub_difficulty), json.dumps(tags or [], ensure_ascii=False), icon, coll.key, author, user, int(time.time())),
             )
         return self.get(cur.lastrowid)  # type: ignore[arg-type]
 
@@ -302,10 +394,13 @@ class MapDB:
         return self.get(map_id)  # type: ignore[return-value]
 
     def edit(self, map_id: int, field_name: str, value: str, user: str = "") -> MapEntry:
+        field_name = self.FIELD_ALIASES.get(field_name.lower(), field_name)
         if field_name not in self.EDITABLE:
             raise ValueError("可修改字段：" + " / ".join(self.EDITABLE) + "（别名、标签、图标请用专用指令）")
         if field_name == "difficulty":
             value = normalize_difficulty(value)  # type: ignore[assignment]
+        elif field_name == "sub_difficulty":
+            value = normalize_sub_difficulty(value)  # type: ignore[assignment]
         elif field_name == "collection":
             coll = self.find_collection(value)
             if not coll:
