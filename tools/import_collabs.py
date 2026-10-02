@@ -86,7 +86,7 @@ def parse_dialog(z: zipfile.ZipFile, lang: str) -> dict[str, str]:
             continue
         m = DIALOG_LINE.match(line)
         if m:
-            cur = m.group(1)
+            cur = m.group(1).lower()  # Celeste 的 Dialog key 不区分大小写
             if m.group(2).strip():
                 out[cur] = m.group(2).strip()
         elif cur and cur not in out and line.strip():
@@ -95,7 +95,9 @@ def parse_dialog(z: zipfile.ZipFile, lang: str) -> dict[str, str]:
 
 
 def clean(s: str) -> str:
-    return BRACES.sub("", s).strip()
+    s = BRACES.sub("", s).strip()
+    # 汉化里常见 "香 皂" 这类排版空格，去掉汉字之间的空格
+    return re.sub(r"(?<=[一-鿿]) +(?=[一-鿿])", "", s)
 
 
 def split_author(raw: str) -> str:
@@ -105,7 +107,7 @@ def split_author(raw: str) -> str:
 
 
 def dialog_key(mod: str, folder: str, file: str) -> str:
-    return re.sub(r"[^A-Za-z0-9_]", "_", f"{mod}_{folder}_{file}")
+    return re.sub(r"[^A-Za-z0-9_]", "_", f"{mod}_{folder}_{file}").lower()
 
 
 def save_icon(z: zipfile.ZipFile, src: str, dest_rel: str) -> str | None:
@@ -136,9 +138,6 @@ def import_collab(mods: Path, c: dict) -> tuple[dict, list[dict]]:
         name_zh = name_zh if CJK.search(name_zh) else ""  # 没有汉化时简中 Dialog 会回落成英文
         author = split_author(en.get(key + "_author", "") or zh.get(key + "_author", ""))
         tags: list[str] = []
-        if file.lower().startswith("zz-heartside") or "heartside" in file.lower():
-            tags.append("红心面")
-            name_en = name_en if name_en != file else "Heartside"
 
         difficulty = None
         icon = None
@@ -177,34 +176,34 @@ OFFICIAL = {
 
 
 def official_maps() -> list[dict]:
+    # 名称取自游戏本体 Content/Dialog 的 AREA_0..AREA_10（简中 / 英文）；别名为玩家常用叫法。
     chapters = [
-        ("0", "序章", "Prologue", ["Prologue"], None),
-        ("1", "先辈之城", "Forsaken City", ["城市", "1A"], "1"),
-        ("2", "旧址", "Old Site", ["2A"], "2"),
-        ("3", "天空度假村", "Celestial Resort", ["酒店", "度假村", "3A"], "3"),
-        ("4", "黄金山脊", "Golden Ridge", ["山脊", "4A"], "4"),
-        ("5", "镜之神殿", "Mirror Temple", ["神殿", "5A"], "5"),
-        ("6", "映像", "Reflection", ["6A"], "6"),
-        ("7", "山巅", "The Summit", ["7A"], "7"),
-        ("8", "核心", "Core", ["8A"], "8"),
-        ("9", "农场", "Farewell", ["终章", "告别", "Farewell", "9"], None),
+        ("0", "序幕", "Prologue", ["序章", "Prologue"]),
+        ("1", "被遗弃的城市", "Forsaken City", ["先辈之城", "遗弃之城", "城市", "1A"]),
+        ("2", "旧址", "Old Site", ["旧遗址", "2A"]),
+        ("3", "天空度假山庄", "Celestial Resort", ["天空度假村", "度假山庄", "度假村", "酒店", "3A"]),
+        ("4", "黄金山脊", "Golden Ridge", ["山脊", "4A"]),
+        ("5", "镜之寺庙", "Mirror Temple", ["镜之神殿", "神殿", "寺庙", "5A"]),
+        ("6", "沉思", "Reflection", ["映像", "倒影", "6A"]),
+        ("7", "山顶", "The Summit", ["山巅", "Summit", "7A"]),
+        ("8", "尾声", "Epilogue", ["Epilogue"]),
+        ("9", "核心", "Core", ["8A"]),
+        ("10", "再见", "Farewell", ["终章", "告别", "Farewell"]),
     ]
-    out = []
-    for num, zh, en, aliases, _ in chapters:
-        out.append(
-            {
-                "name": zh,
-                "name_en": en,
-                "aliases": aliases,
-                "difficulty": None,
-                "tags": ["A面"] if num not in ("0", "9") else [],
-                "icon": None,
-                "collection": "vanilla",
-                "author": "Maddy Makes Games",
-                "sid": f"Celeste/{num}-{en.replace(' ', '')}",
-            }
-        )
-    return out
+    return [
+        {
+            "name": zh,
+            "name_en": en,
+            "aliases": aliases,
+            "difficulty": None,
+            "tags": [],
+            "icon": None,
+            "collection": "vanilla",
+            "author": "Maddy Makes Games",
+            "sid": f"Celeste/{num}-{en.replace(' ', '')}",
+        }
+        for num, zh, en, aliases in chapters
+    ]
 
 
 def main() -> None:

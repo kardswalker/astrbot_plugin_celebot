@@ -46,9 +46,10 @@
  ],
  "maps": [
   {
-   "name": "序章",
+   "name": "序幕",
    "name_en": "Prologue",
    "aliases": [
+    "序章",
     "Prologue"
    ],
    "difficulty": null,
@@ -59,16 +60,16 @@
    "sid": "Celeste/0-Prologue"
   },
   {
-   "name": "先辈之城",
+   "name": "被遗弃的城市",
    "name_en": "Forsaken City",
    "aliases": [
+    "先辈之城",
+    "遗弃之城",
     "城市",
     "1A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
@@ -78,29 +79,28 @@
    "name": "旧址",
    "name_en": "Old Site",
    "aliases": [
+    "旧遗址",
     "2A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
    "sid": "Celeste/2-OldSite"
   },
   {
-   "name": "天空度假村",
+   "name": "天空度假山庄",
    "name_en": "Celestial Resort",
    "aliases": [
-    "酒店",
+    "天空度假村",
+    "度假山庄",
     "度假村",
+    "酒店",
     "3A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
@@ -114,59 +114,70 @@
     "4A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
    "sid": "Celeste/4-GoldenRidge"
   },
   {
-   "name": "镜之神殿",
+   "name": "镜之寺庙",
    "name_en": "Mirror Temple",
    "aliases": [
+    "镜之神殿",
     "神殿",
+    "寺庙",
     "5A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
    "sid": "Celeste/5-MirrorTemple"
   },
   {
-   "name": "映像",
+   "name": "沉思",
    "name_en": "Reflection",
    "aliases": [
+    "映像",
+    "倒影",
     "6A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
    "sid": "Celeste/6-Reflection"
   },
   {
-   "name": "山巅",
+   "name": "山顶",
    "name_en": "The Summit",
    "aliases": [
+    "山巅",
+    "Summit",
     "7A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
    "sid": "Celeste/7-TheSummit"
+  },
+  {
+   "name": "尾声",
+   "name_en": "Epilogue",
+   "aliases": [
+    "Epilogue"
+   ],
+   "difficulty": null,
+   "tags": [],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/8-Epilogue"
   },
   {
    "name": "核心",
@@ -175,29 +186,26 @@
     "8A"
    ],
    "difficulty": null,
-   "tags": [
-    "A面"
-   ],
+   "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
-   "sid": "Celeste/8-Core"
+   "sid": "Celeste/9-Core"
   },
   {
-   "name": "农场",
+   "name": "再见",
    "name_en": "Farewell",
    "aliases": [
     "终章",
     "告别",
-    "Farewell",
-    "9"
+    "Farewell"
    ],
    "difficulty": null,
    "tags": [],
    "icon": null,
    "collection": "vanilla",
    "author": "Maddy Makes Games",
-   "sid": "Celeste/9-Farewell"
+   "sid": "Celeste/10-Farewell"
   },
   {
    "name": "如果我的“私人车道”让你差点死掉...",
@@ -222,7 +230,7 @@
    "sid": "StrawberryJam2021/1-Beginner/Ceph"
   },
   {
-   "name": "香 皂",
+   "name": "香皂",
    "name_en": "Soap",
    "aliases": [],
    "difficulty": "Beginner",
@@ -325,12 +333,10 @@
    "name_en": "Blueberry Bay",
    "aliases": [],
    "difficulty": "Beginner",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "sj2021/1-Beginner.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "the Beginner Heart Side",
    "sid": "StrawberryJam2021/1-Beginner/ZZ-HeartSide"
   },
   {
@@ -389,18 +395,18 @@
    "sid": "StrawberryJam2021/1-Beginner/hyperlife"
   },
   {
-   "name": "joltik",
-   "name_en": "joltik",
+   "name": "午夜之巅",
+   "name_en": "Midnight Spire",
    "aliases": [],
    "difficulty": "Beginner",
    "tags": [],
    "icon": "sj2021/1-Beginner.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "Joltik",
    "sid": "StrawberryJam2021/1-Beginner/joltik"
   },
   {
-   "name": "画 境",
+   "name": "画境",
    "name_en": "paint",
    "aliases": [],
    "difficulty": "Beginner",
@@ -411,18 +417,18 @@
    "sid": "StrawberryJam2021/1-Beginner/mosscairn"
   },
   {
-   "name": "skeleton",
-   "name_en": "skeleton",
+   "name": "树巢",
+   "name_en": "Treehive",
    "aliases": [],
    "difficulty": "Beginner",
    "tags": [],
    "icon": "sj2021/1-Beginner.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "Skeleton & Earthwise",
    "sid": "StrawberryJam2021/1-Beginner/skeleton"
   },
   {
-   "name": "挤 压",
+   "name": "挤压",
    "name_en": "The Squeeze",
    "aliases": [],
    "difficulty": "Beginner",
@@ -444,14 +450,14 @@
    "sid": "StrawberryJam2021/1-Beginner/voliver9"
   },
   {
-   "name": "Arphimigon",
-   "name_en": "Arphimigon",
+   "name": "星空之眠",
+   "name_en": "Sleeping Under Stars",
    "aliases": [],
    "difficulty": "Intermediate",
    "tags": [],
    "icon": "sj2021/2-Intermediate.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "Arphi",
    "sid": "StrawberryJam2021/2-Intermediate/Arphimigon"
   },
   {
@@ -466,7 +472,7 @@
    "sid": "StrawberryJam2021/2-Intermediate/Dooshii"
   },
   {
-   "name": "碧 蓝",
+   "name": "碧蓝",
    "name_en": "Deep Blue",
    "aliases": [],
    "difficulty": "Intermediate",
@@ -477,7 +483,7 @@
    "sid": "StrawberryJam2021/2-Intermediate/Emik"
   },
   {
-   "name": "眩 晕",
+   "name": "眩晕",
    "name_en": "Vertigo",
    "aliases": [],
    "difficulty": "Intermediate",
@@ -591,12 +597,10 @@
    "name_en": "Raspberry Roots",
    "aliases": [],
    "difficulty": "Intermediate",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "sj2021/2-Intermediate.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "the Intermediate Heart Side",
    "sid": "StrawberryJam2021/2-Intermediate/ZZ-HeartSide"
   },
   {
@@ -699,7 +703,7 @@
    "sid": "StrawberryJam2021/3-Advanced/Indecx"
   },
   {
-   "name": "十六号 塔",
+   "name": "十六号塔",
    "name_en": "The Tower (XVI)",
    "aliases": [],
    "difficulty": "Advanced",
@@ -754,7 +758,7 @@
    "sid": "StrawberryJam2021/3-Advanced/Meario"
   },
   {
-   "name": "突 触",
+   "name": "突触",
    "name_en": "Synapse",
    "aliases": [],
    "difficulty": "Advanced",
@@ -868,12 +872,10 @@
    "name_en": "Mango Mesa",
    "aliases": [],
    "difficulty": "Advanced",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "sj2021/3-Advanced.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "the Advanced Heart Side",
    "sid": "StrawberryJam2021/3-Advanced/ZZ-HeartSide"
   },
   {
@@ -943,7 +945,7 @@
    "sid": "StrawberryJam2021/3-Advanced/sp1029"
   },
   {
-   "name": "变 向",
+   "name": "变向",
    "name_en": "A Change in Direction",
    "aliases": [],
    "difficulty": "Expert",
@@ -1042,7 +1044,7 @@
    "sid": "StrawberryJam2021/4-Expert/Jackal"
   },
   {
-   "name": "浮 点",
+   "name": "浮点",
    "name_en": "FLOATING POINT",
    "aliases": [],
    "difficulty": "Expert",
@@ -1064,7 +1066,7 @@
    "sid": "StrawberryJam2021/4-Expert/LethargicDoggo"
   },
   {
-   "name": "逆 旅",
+   "name": "逆旅",
    "name_en": "Summit Down-Side",
    "aliases": [],
    "difficulty": "Expert",
@@ -1167,12 +1169,10 @@
    "name_en": "Starfruit Supernova",
    "aliases": [],
    "difficulty": "Expert",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "sj2021/4-Expert.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "the Expert Heart Side",
    "sid": "StrawberryJam2021/4-Expert/ZZ-HeartSide"
   },
   {
@@ -1187,7 +1187,7 @@
    "sid": "StrawberryJam2021/4-Expert/alicequasar"
   },
   {
-   "name": "钟 塔",
+   "name": "钟塔",
    "name_en": "Clockwork",
    "aliases": [],
    "difficulty": "Expert",
@@ -1220,14 +1220,14 @@
    "sid": "StrawberryJam2021/4-Expert/itsabrody"
   },
   {
-   "name": "nyan",
-   "name_en": "nyan",
+   "name": "地铁霓虹",
+   "name_en": "Subway Neon",
    "aliases": [],
    "difficulty": "Expert",
    "tags": [],
    "icon": "sj2021/4-Expert.png",
    "collection": "sj2021",
-   "author": "",
+   "author": "Nyan",
    "sid": "StrawberryJam2021/4-Expert/nyan"
   },
   {
@@ -1253,7 +1253,7 @@
    "sid": "StrawberryJam2021/4-Expert/powerav"
   },
   {
-   "name": "纽 带",
+   "name": "纽带",
    "name_en": "Vinculum",
    "aliases": [],
    "difficulty": "Expert",
@@ -1330,7 +1330,7 @@
    "sid": "StrawberryJam2021/5-Grandmaster/Hydro"
   },
   {
-   "name": "象 牙",
+   "name": "象牙",
    "name_en": "Ivory",
    "aliases": [],
    "difficulty": "Grandmaster",
@@ -1378,9 +1378,7 @@
    "name_en": "Passionfruit Pantheon",
    "aliases": [],
    "difficulty": "Grandmaster",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "sj2021/5-Grandmaster.png",
    "collection": "sj2021",
    "author": "the Grandmaster Heart Side",
@@ -1409,7 +1407,7 @@
    "sid": "StrawberryJam2021/5-Grandmaster/fishtank"
   },
   {
-   "name": "山 顶",
+   "name": "山顶",
    "name_en": "summit",
    "aliases": [],
    "difficulty": "Grandmaster",
@@ -1655,9 +1653,7 @@
    "name_en": "Beginner Heart Side",
    "aliases": [],
    "difficulty": "Beginner",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "spring2020/1-Beginner.png",
    "collection": "spring2020",
    "author": "the Beginner Mappers",
@@ -1888,9 +1884,7 @@
    "name_en": "Intermediate Heart Side",
    "aliases": [],
    "difficulty": "Intermediate",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "spring2020/2-Intermediate.png",
    "collection": "spring2020",
    "author": "the Intermediate Mappers",
@@ -2132,9 +2126,7 @@
    "name_en": "Advanced Heart Side",
    "aliases": [],
    "difficulty": "Advanced",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "spring2020/3-Advanced.png",
    "collection": "spring2020",
    "author": "the Advanced Mappers",
@@ -2310,9 +2302,7 @@
    "name_en": "Expert Heart Side",
    "aliases": [],
    "difficulty": "Expert",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "spring2020/4-Expert.png",
    "collection": "spring2020",
    "author": "the Expert Mappers",
@@ -2477,9 +2467,7 @@
    "name_en": "Old Grandmaster Heart Side",
    "aliases": [],
    "difficulty": "Grandmaster",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "spring2020/5-Grandmaster.png",
    "collection": "spring2020",
    "author": "the Grandmaster Mappers",
@@ -2490,9 +2478,7 @@
    "name_en": "Grandmaster Heart Side",
    "aliases": [],
    "difficulty": "Grandmaster",
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "spring2020/5-Grandmaster.png",
    "collection": "spring2020",
    "author": "the Grandmaster Mappers",
@@ -2756,12 +2742,10 @@
    "name_en": "Winter Collab Fusion Side",
    "aliases": [],
    "difficulty": null,
-   "tags": [
-    "红心面"
-   ],
+   "tags": [],
    "icon": "winter2021/default.png",
    "collection": "winter2021",
-   "author": "",
+   "author": "Winter Collab Mappers",
    "sid": "WinterCollab2021/1-Maps/ZZ-HeartSide"
   },
   {

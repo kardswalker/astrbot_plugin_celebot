@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import difflib
+from functools import lru_cache
 import json
 import re
 import shutil
@@ -45,6 +46,76 @@ CREATE TABLE IF NOT EXISTS maps (
 CREATE INDEX IF NOT EXISTS idx_maps_collection ON maps(collection);
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);
 """
+
+MIN_SCORE = 0.4
+
+try:
+    from pypinyin import Style, lazy_pinyin
+except ImportError:  # 拼音搜索为可选功能
+    lazy_pinyin = None
+
+_CJK = re.compile(r"[一-鿿]")
+
+
+@lru_cache(maxsize=4096)
+def _pinyin(text: str) -> tuple[str, str]:
+    """返回 (全拼, 首字母)，无汉字或未安装 pypinyin 时为空串。"""
+    if lazy_pinyin is None or not _CJK.search(text):
+        return "", ""
+    full = lazy_pinyin(text)
+    return "".join(full), "".join(p[0] for p in full if p)
+
+
+def _bigrams(s: str) -> set[str]:
+    return {s[i : i + 2] for i in range(len(s) - 1)} if len(s) > 1 else {s}
+
+
+def _best_window(q: str, n: str) -> float:
+    """q 与 n 中长度相近的子串的最大相似度，用于容忍错别字。"""
+    if len(n) <= len(q):
+        return difflib.SequenceMatcher(None, q, n).ratio()
+    return max(difflib.SequenceMatcher(None, q, n[i : i + len(q)]).ratio() for i in range(len(n) - len(q) + 1))
+
+
+def _is_subsequence(q: str, n: str) -> bool:
+    it = iter(n)
+    return all(c in it for c in q)
+
+
+def _score(q: str, tokens: list[str], name: str) -> float:
+    """q 为归一化后的查询，tokens 为原始分词；返回 0~1 的匹配度。"""
+    n = norm(name)
+    if not n:
+        return 0.0
+    if n == q:
+        return 1.0
+    if n.startswith(q):
+        return 0.9
+    if q in n:
+        return 0.8
+    if len(tokens) > 1 and all(norm(t) in n for t in tokens):
+        return 0.75  # 多关键词全部命中，顺序不限
+
+    best = 0.0
+    full, initials = _pinyin(name)
+    if full:
+        for p in (full, initials):
+            if q == p or (len(q) >= 2 and p.startswith(q)):
+                best = max(best, 0.7)
+            elif len(q) >= 3 and q in p:
+                best = max(best, 0.6)
+    if len(q) >= 2:
+        if _is_subsequence(q, n):
+            best = max(best, 0.45 + 0.1 * len(q) / len(n))  # 越紧凑越靠前
+        qb, nb = _bigrams(q), _bigrams(n)
+        dice = 2 * len(qb & nb) / (len(qb) + len(nb))
+        if dice >= 0.5:
+            best = max(best, dice * 0.75)
+        if len(q) >= 4 and dice >= 0.25:  # 先用 bigram 粗筛，避免对所有名称做昂贵的窗口比较
+            r = _best_window(q, n)
+            if r >= 0.75:
+                best = max(best, r * 0.7)
+    return best
 
 
 def norm(s: str) -> str:
@@ -178,30 +249,28 @@ class MapDB:
         return [_row_to_map(r) for r in self.conn.execute(sql + " ORDER BY id", args)]
 
     def search(self, query: str, collection: str | None = None, limit: int = 10) -> list[MapEntry]:
-        """按名称/别名/作者模糊搜索，返回按匹配度降序的结果。"""
-        q = norm(query)
+        """模糊搜索，返回按匹配度降序的结果。
+
+        支持：名称/别名/作者的包含与前缀匹配、多关键词、错别字与漏字（bigram 相似度、子序列）、
+        拼音全拼与首字母（需要 pypinyin）。查询里出现合集名/别名（如「春游 水晶」）时自动限定合集。
+        """
+        tokens = [t for t in re.split(r"\s+", query.strip()) if t]
+        if collection is None and len(tokens) > 1:
+            for t in tokens:
+                c = self.find_collection(t)
+                if c:
+                    collection = c.key
+                    tokens.remove(t)
+                    break
+        q = norm("".join(tokens))
         if not q:
             return []
         scored: list[tuple[float, MapEntry]] = []
         for m in self.list_maps(collection):
-            best = 0.0
-            for n in m.names():
-                nn = norm(n)
-                if not nn:
-                    continue
-                if nn == q:
-                    best = max(best, 1.0)
-                elif nn.startswith(q):
-                    best = max(best, 0.9)
-                elif q in nn:
-                    best = max(best, 0.8)
-                elif len(q) >= 3:
-                    r = difflib.SequenceMatcher(None, q, nn).ratio()
-                    if r >= 0.6:
-                        best = max(best, r * 0.7)
-            if best == 0 and len(q) >= 2 and q in norm(m.author):
-                best = 0.5
-            if best:
+            best = max((_score(q, tokens, n) for n in m.names() if n), default=0.0)
+            if m.author:
+                best = max(best, _score(q, tokens, m.author) * 0.6)
+            if best >= MIN_SCORE:
                 scored.append((best, m))
         scored.sort(key=lambda x: (-x[0], x[1].id))
         return [m for _, m in scored[:limit]]
