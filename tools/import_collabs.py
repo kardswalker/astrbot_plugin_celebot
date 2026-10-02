@@ -93,6 +93,13 @@ COLLABS = [
         "difficulty_from_dir": False,
         "tags_from_dialog": True,  # Dialog 的 collabcreditstags 形如 "Yellow Advanced"：颜色 + 难度
         "prefer_zh_author": True,
+        # 逐图图标：Stickers/ChineseNewYear2024/Lobby/<英文名>.png，按归一化英文名匹配
+        "sticker_dir": "Graphics/Atlases/Stickers/ChineseNewYear2024/Lobby/",
+        "sticker_name_aliases": {  # 地图文件 → 贴纸文件名（不含扩展名），用于英文名对不上的
+            "youziAfterain": "Afterain",
+            "StarSapphireGDDN": "GDDN",
+            "ShadowRo": "Season_Traveler",
+        },
         "fallback_icon": "Graphics/Atlases/Gui/areas/CNY2024/Lobby/1-Lobby.png",
     },
 ]
@@ -191,11 +198,18 @@ def import_collab(mods: Path, c: dict) -> tuple[dict, list[dict]]:
     en = parse_dialog(z, "English")
     maps: list[dict] = []
     sub_by_name, sub_heart = load_sub_difficulty(c)
+    name_stickers: dict[str, str] = {}  # 归一化贴纸名 → zip 内路径（按英文名匹配的合集用）
+    if "sticker_dir" in c:
+        name_stickers = {
+            norm_name(Path(n).stem): n
+            for n in z.namelist() if n.startswith(c["sticker_dir"]) and n.lower().endswith(".png")
+        }
     stickers = None
     if "sticker_zip" in c:
         sz = zipfile.ZipFile(mods / c["sticker_zip"])
         stickers = (sz, {n.lower(): n for n in sz.namelist()})
     unmatched = set(sub_by_name)
+    used_stickers: set[str] = set()
     pat = re.compile(rf"^Maps/{c['mod']}/(\d+-[^/]+)/([^/]+)\.bin$")
     for entry in sorted(z.namelist()):
         m = pat.match(entry)
@@ -237,6 +251,12 @@ def import_collab(mods: Path, c: dict) -> tuple[dict, list[dict]]:
             src = lower.get(c["sticker_path"].format(folder=folder, file=stem).lower())
             if src:
                 icon = save_icon(sz, src, f"{c['key']}/{file_slug(folder, file)}.png") or icon
+        if name_stickers:
+            stem = c.get("sticker_name_aliases", {}).get(file, name_en)
+            src = name_stickers.get(norm_name(stem))
+            if src:
+                icon = save_icon(z, src, f"{c['key']}/{file}.png") or icon
+                used_stickers.add(src)
         if "card_icon" in c:
             icon = save_icon(z, c["card_icon"].format(file=file), f"{c['key']}/{file}.png")
         if not icon and "fallback_icon" in c:
@@ -256,6 +276,8 @@ def import_collab(mods: Path, c: dict) -> tuple[dict, list[dict]]:
                 "sid": f"{c['mod']}/{folder}/{file}",
             }
         )
+    if name_stickers and set(name_stickers.values()) - used_stickers:
+        print(f"WARN {c['key']}: 未使用的贴纸 {sorted(set(name_stickers.values()) - used_stickers)}")
     if unmatched:
         print(f"WARN {c['key']}: 细分难度数据里有 {len(unmatched)} 个名称没有对上地图：{sorted(unmatched)}")
     coll = {k: c[k] for k in ("key", "name", "name_en", "aliases")}
