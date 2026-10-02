@@ -1,0 +1,8 @@
+{
+  "editors": {
+    "description": "地图库编辑权限用户",
+    "type": "list",
+    "hint": "填写允许上传/修改地图数据的用户 ID（QQ 号等）。AstrBot 管理员默认拥有编辑权限。",
+    "default": []
+  }
+}

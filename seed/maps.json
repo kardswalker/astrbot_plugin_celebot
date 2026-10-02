@@ -1,0 +1,2779 @@
+{
+ "collections": [
+  {
+   "key": "vanilla",
+   "name": "官图",
+   "name_en": "Celeste (Vanilla)",
+   "aliases": [
+    "原版",
+    "本体",
+    "vanilla"
+   ]
+  },
+  {
+   "key": "sj2021",
+   "name": "草莓酱合集",
+   "name_en": "Strawberry Jam Collab",
+   "aliases": [
+    "草莓酱",
+    "SJ",
+    "SJ2021",
+    "Strawberry Jam"
+   ]
+  },
+  {
+   "key": "spring2020",
+   "name": "春游合集",
+   "name_en": "Spring Collab 2020",
+   "aliases": [
+    "春游",
+    "SC",
+    "SC2020",
+    "Spring Collab"
+   ]
+  },
+  {
+   "key": "winter2021",
+   "name": "冬游合集",
+   "name_en": "Winter Collab 2021",
+   "aliases": [
+    "冬游",
+    "WC",
+    "WC2021",
+    "Winter Collab"
+   ]
+  }
+ ],
+ "maps": [
+  {
+   "name": "序章",
+   "name_en": "Prologue",
+   "aliases": [
+    "Prologue"
+   ],
+   "difficulty": null,
+   "tags": [],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/0-Prologue"
+  },
+  {
+   "name": "先辈之城",
+   "name_en": "Forsaken City",
+   "aliases": [
+    "城市",
+    "1A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/1-ForsakenCity"
+  },
+  {
+   "name": "旧址",
+   "name_en": "Old Site",
+   "aliases": [
+    "2A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/2-OldSite"
+  },
+  {
+   "name": "天空度假村",
+   "name_en": "Celestial Resort",
+   "aliases": [
+    "酒店",
+    "度假村",
+    "3A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/3-CelestialResort"
+  },
+  {
+   "name": "黄金山脊",
+   "name_en": "Golden Ridge",
+   "aliases": [
+    "山脊",
+    "4A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/4-GoldenRidge"
+  },
+  {
+   "name": "镜之神殿",
+   "name_en": "Mirror Temple",
+   "aliases": [
+    "神殿",
+    "5A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/5-MirrorTemple"
+  },
+  {
+   "name": "映像",
+   "name_en": "Reflection",
+   "aliases": [
+    "6A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/6-Reflection"
+  },
+  {
+   "name": "山巅",
+   "name_en": "The Summit",
+   "aliases": [
+    "7A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/7-TheSummit"
+  },
+  {
+   "name": "核心",
+   "name_en": "Core",
+   "aliases": [
+    "8A"
+   ],
+   "difficulty": null,
+   "tags": [
+    "A面"
+   ],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/8-Core"
+  },
+  {
+   "name": "农场",
+   "name_en": "Farewell",
+   "aliases": [
+    "终章",
+    "告别",
+    "Farewell",
+    "9"
+   ],
+   "difficulty": null,
+   "tags": [],
+   "icon": null,
+   "collection": "vanilla",
+   "author": "Maddy Makes Games",
+   "sid": "Celeste/9-Farewell"
+  },
+  {
+   "name": "如果我的“私人车道”让你差点死掉...",
+   "name_en": "If my 'driveway' almost did you in...",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Bing_Over_Google",
+   "sid": "StrawberryJam2021/1-Beginner/Bing_Over_Google"
+  },
+  {
+   "name": "节奏山脊",
+   "name_en": "Cassette Cliffs",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Ceph",
+   "sid": "StrawberryJam2021/1-Beginner/Ceph"
+  },
+  {
+   "name": "香 皂",
+   "name_en": "Soap",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Circumplex",
+   "sid": "StrawberryJam2021/1-Beginner/Circumplex"
+  },
+  {
+   "name": "城市之上",
+   "name_en": "Over the City",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Coup Critik",
+   "sid": "StrawberryJam2021/1-Beginner/CoupCritik"
+  },
+  {
+   "name": "对流层",
+   "name_en": "Troposphere",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Eclipse",
+   "sid": "StrawberryJam2021/1-Beginner/Eclipse"
+  },
+  {
+   "name": "管道与开关",
+   "name_en": "Switchtube Vista",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Flagpole1up",
+   "sid": "StrawberryJam2021/1-Beginner/Flagpole1up"
+  },
+  {
+   "name": "来自星星的礼物",
+   "name_en": "A Gift From the Stars",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "HankyMueller",
+   "sid": "StrawberryJam2021/1-Beginner/HankyMueller"
+  },
+  {
+   "name": "草莓果园",
+   "name_en": "Strawberry Orchard",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Jadeturtle",
+   "sid": "StrawberryJam2021/1-Beginner/Jadeturtle"
+  },
+  {
+   "name": "眼见为实",
+   "name_en": "Seeing is Believing",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "NotYourBadeline",
+   "sid": "StrawberryJam2021/1-Beginner/NotYourBadeline"
+  },
+  {
+   "name": "坠落谜题",
+   "name_en": "Dropzle",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Owen Shirrell",
+   "sid": "StrawberryJam2021/1-Beginner/Owen-Shirrell"
+  },
+  {
+   "name": "玫瑰花园",
+   "name_en": "Rose Garden",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Quinnigan",
+   "sid": "StrawberryJam2021/1-Beginner/Quinnigan"
+  },
+  {
+   "name": "蓝莓湾",
+   "name_en": "Blueberry Bay",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/1-Beginner/ZZ-HeartSide"
+  },
+  {
+   "name": "林间小径",
+   "name_en": "Forest Path",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Asterisk",
+   "sid": "StrawberryJam2021/1-Beginner/asteriskblue"
+  },
+  {
+   "name": "苍蓝洞穴",
+   "name_en": "Azure Caverns",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "cellularAutomaton",
+   "sid": "StrawberryJam2021/1-Beginner/cellularAutomaton"
+  },
+  {
+   "name": "圈圈环礁湖",
+   "name_en": "Loopy Lagoon",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Coffe",
+   "sid": "StrawberryJam2021/1-Beginner/coffe"
+  },
+  {
+   "name": "潜在的一切",
+   "name_en": "Potential for Anything",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "BeanJammin & frozenflygone",
+   "sid": "StrawberryJam2021/1-Beginner/frozenflygone"
+  },
+  {
+   "name": "崩坏天际线",
+   "name_en": "Collapsing Skyline",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Hyperlife & Quinnigan",
+   "sid": "StrawberryJam2021/1-Beginner/hyperlife"
+  },
+  {
+   "name": "joltik",
+   "name_en": "joltik",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/1-Beginner/joltik"
+  },
+  {
+   "name": "画 境",
+   "name_en": "paint",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "mosscairn",
+   "sid": "StrawberryJam2021/1-Beginner/mosscairn"
+  },
+  {
+   "name": "skeleton",
+   "name_en": "skeleton",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/1-Beginner/skeleton"
+  },
+  {
+   "name": "挤 压",
+   "name_en": "The Squeeze",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "Snas",
+   "sid": "StrawberryJam2021/1-Beginner/snas"
+  },
+  {
+   "name": "被核心的城市",
+   "name_en": "Coresaken City",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "sj2021/1-Beginner.png",
+   "collection": "sj2021",
+   "author": "voliver9 & Meario",
+   "sid": "StrawberryJam2021/1-Beginner/voliver9"
+  },
+  {
+   "name": "Arphimigon",
+   "name_en": "Arphimigon",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/2-Intermediate/Arphimigon"
+  },
+  {
+   "name": "霜冻碎片",
+   "name_en": "Frosted Fragments",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Dooshii & bryse0n",
+   "sid": "StrawberryJam2021/2-Intermediate/Dooshii"
+  },
+  {
+   "name": "碧 蓝",
+   "name_en": "Deep Blue",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Emik",
+   "sid": "StrawberryJam2021/2-Intermediate/Emik"
+  },
+  {
+   "name": "眩 晕",
+   "name_en": "Vertigo",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Evilleafy",
+   "sid": "StrawberryJam2021/2-Intermediate/Evilleafy"
+  },
+  {
+   "name": "吃豆女孩",
+   "name_en": "EAT GIRL",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Ezel",
+   "sid": "StrawberryJam2021/2-Intermediate/Ezel"
+  },
+  {
+   "name": "红蜜灯股份有限公司",
+   "name_en": "Honeyzip Inc.",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Glow Woomii",
+   "sid": "StrawberryJam2021/2-Intermediate/GlowWoomii"
+  },
+  {
+   "name": "千空之寺",
+   "name_en": "Temple of a Thousand Skies",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Ice",
+   "sid": "StrawberryJam2021/2-Intermediate/Ice"
+  },
+  {
+   "name": "净化行动",
+   "name_en": "In Filtration",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Jems",
+   "sid": "StrawberryJam2021/2-Intermediate/Jems"
+  },
+  {
+   "name": "深海迷航",
+   "name_en": "Supernautica",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "LegS",
+   "sid": "StrawberryJam2021/2-Intermediate/LegS"
+  },
+  {
+   "name": "第五维度",
+   "name_en": "Fifth Dimension",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Liero",
+   "sid": "StrawberryJam2021/2-Intermediate/Liero"
+  },
+  {
+   "name": "午夜季风",
+   "name_en": "Midnight Monsoon",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Luma",
+   "sid": "StrawberryJam2021/2-Intermediate/Luma"
+  },
+  {
+   "name": "河豚运输有限公司",
+   "name_en": "Pufferfish Transportation Co.",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Rocketguy2",
+   "sid": "StrawberryJam2021/2-Intermediate/Rocketguy2"
+  },
+  {
+   "name": "汤之海",
+   "name_en": "Sea of Soup",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "SpoopySoup",
+   "sid": "StrawberryJam2021/2-Intermediate/SpoopySoup"
+  },
+  {
+   "name": "树莓根下",
+   "name_en": "Raspberry Roots",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/2-Intermediate/ZZ-HeartSide"
+  },
+  {
+   "name": "化方为圆",
+   "name_en": "Square the Circle",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "bryse0n",
+   "sid": "StrawberryJam2021/2-Intermediate/bryse0n"
+  },
+  {
+   "name": "低重力植物园",
+   "name_en": "Low-G Botany",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "Marlin",
+   "sid": "StrawberryJam2021/2-Intermediate/marlin"
+  },
+  {
+   "name": "塔",
+   "name_en": "The Tower",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "pixelator",
+   "sid": "StrawberryJam2021/2-Intermediate/pixelator"
+  },
+  {
+   "name": "工地难题",
+   "name_en": "Construction Conundrum",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "thebreadstick1",
+   "sid": "StrawberryJam2021/2-Intermediate/thebreadstick1"
+  },
+  {
+   "name": "不知所谓的机器",
+   "name_en": "Pointless Machines",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "sj2021/2-Intermediate.png",
+   "collection": "sj2021",
+   "author": "vitellary",
+   "sid": "StrawberryJam2021/2-Intermediate/vitellary"
+  },
+  {
+   "name": "水母圣所",
+   "name_en": "Jellyfish Sanctum",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "BlueXans",
+   "sid": "StrawberryJam2021/3-Advanced/BlueXans"
+  },
+  {
+   "name": "开关理论",
+   "name_en": "Toggle Theory",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "citrea",
+   "sid": "StrawberryJam2021/3-Advanced/Citrea"
+  },
+  {
+   "name": "上层建筑",
+   "name_en": "Superstructure",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Goldian",
+   "sid": "StrawberryJam2021/3-Advanced/Goldian"
+  },
+  {
+   "name": "星空遗迹",
+   "name_en": "Starry Ruins",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Indecx",
+   "sid": "StrawberryJam2021/3-Advanced/Indecx"
+  },
+  {
+   "name": "十六号 塔",
+   "name_en": "The Tower (XVI)",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Jan",
+   "sid": "StrawberryJam2021/3-Advanced/JANisEXIST"
+  },
+  {
+   "name": "星光站",
+   "name_en": "Starlight Station",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Jolly, bryse0n & fonda1515",
+   "sid": "StrawberryJam2021/3-Advanced/Jolly"
+  },
+  {
+   "name": "炽热海沟",
+   "name_en": "Tectonic Trenches",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Julia",
+   "sid": "StrawberryJam2021/3-Advanced/Julia"
+  },
+  {
+   "name": "金色黎明",
+   "name_en": "Golden Dawn",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Maladroit, bryse0n & Worldwaker2",
+   "sid": "StrawberryJam2021/3-Advanced/Maladroit"
+  },
+  {
+   "name": "暮光之城",
+   "name_en": "Dusk City",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Meario",
+   "sid": "StrawberryJam2021/3-Advanced/Meario"
+  },
+  {
+   "name": "突 触",
+   "name_en": "Synapse",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "MousseMoose",
+   "sid": "StrawberryJam2021/3-Advanced/MousseMoose"
+  },
+  {
+   "name": "密林之下",
+   "name_en": "Undergrowth",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Nic",
+   "sid": "StrawberryJam2021/3-Advanced/Nic"
+  },
+  {
+   "name": "迷失森林",
+   "name_en": "Lost Woods",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Oppen",
+   "sid": "StrawberryJam2021/3-Advanced/Oppen"
+  },
+  {
+   "name": "实验室",
+   "name_en": "The Lab",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "RadleyMcTuneston & more",
+   "sid": "StrawberryJam2021/3-Advanced/RadleyMcTuneston"
+  },
+  {
+   "name": "迟来的情人节",
+   "name_en": "Belated Valentine's Day",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "YaGrillRoborb",
+   "sid": "StrawberryJam2021/3-Advanced/Roborb"
+  },
+  {
+   "name": "蜂之怒",
+   "name_en": "Bee Berserk",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "TiltTheStars",
+   "sid": "StrawberryJam2021/3-Advanced/TiltTheStars"
+  },
+  {
+   "name": "Java 的地下室",
+   "name_en": "Java's Crypt",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Tortoise",
+   "sid": "StrawberryJam2021/3-Advanced/Tortoise"
+  },
+  {
+   "name": "颠倒洞穴",
+   "name_en": "Rightside-Down Cavern",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Vamp",
+   "sid": "StrawberryJam2021/3-Advanced/Vamp"
+  },
+  {
+   "name": "虚空的召唤",
+   "name_en": "Call of the Void",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Viv",
+   "sid": "StrawberryJam2021/3-Advanced/Viv"
+  },
+  {
+   "name": "雨落玫瑰",
+   "name_en": "Raindrops on Roses",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Worldwaker2",
+   "sid": "StrawberryJam2021/3-Advanced/Worldwaker2"
+  },
+  {
+   "name": "金芒山",
+   "name_en": "Mango Mesa",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/3-Advanced/ZZ-HeartSide"
+  },
+  {
+   "name": "时之沙",
+   "name_en": "Sands of Time",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Astraxel",
+   "sid": "StrawberryJam2021/3-Advanced/astraxel"
+  },
+  {
+   "name": "史莱姆时间！",
+   "name_en": "Slime Time!",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "Gala, Oppen & TiltTheStars",
+   "sid": "StrawberryJam2021/3-Advanced/galaksyz"
+  },
+  {
+   "name": "死亡激光实验室",
+   "name_en": "Lethal Laser Laboratory",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "hennyburgr",
+   "sid": "StrawberryJam2021/3-Advanced/hennyburgr"
+  },
+  {
+   "name": "丛林快跑",
+   "name_en": "Forest Rush",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "ridg",
+   "sid": "StrawberryJam2021/3-Advanced/mmm"
+  },
+  {
+   "name": "克隆之击",
+   "name_en": "Attack of the Clone",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "PugRoy",
+   "sid": "StrawberryJam2021/3-Advanced/pugroy"
+  },
+  {
+   "name": "传送门难题",
+   "name_en": "Thinking with Portals",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "sj2021/3-Advanced.png",
+   "collection": "sj2021",
+   "author": "sp1029",
+   "sid": "StrawberryJam2021/3-Advanced/sp1029"
+  },
+  {
+   "name": "变 向",
+   "name_en": "A Change in Direction",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Agent",
+   "sid": "StrawberryJam2021/4-Expert/Agent"
+  },
+  {
+   "name": "天际篡夺者",
+   "name_en": "Skyline Usurper",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Appels",
+   "sid": "StrawberryJam2021/4-Expert/Appels"
+  },
+  {
+   "name": "斑斓色彩",
+   "name_en": "Chromatic Complex",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Archra & Cabob",
+   "sid": "StrawberryJam2021/4-Expert/Archire"
+  },
+  {
+   "name": "秋色堡垒",
+   "name_en": "Fortress Fall",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Aspar",
+   "sid": "StrawberryJam2021/4-Expert/Aspar"
+  },
+  {
+   "name": "核心问题",
+   "name_en": "The Core Problem",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Banana 23",
+   "sid": "StrawberryJam2021/4-Expert/Banana23"
+  },
+  {
+   "name": "意念力",
+   "name_en": "Psychokinetic",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Cabob",
+   "sid": "StrawberryJam2021/4-Expert/Cabob"
+  },
+  {
+   "name": "库塔拉花园",
+   "name_en": "Garden of Khu'tara",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "DanTKO",
+   "sid": "StrawberryJam2021/4-Expert/DanTKO"
+  },
+  {
+   "name": "蔓生溪谷",
+   "name_en": "Overgrown Linn",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Flamecrafter113",
+   "sid": "StrawberryJam2021/4-Expert/Flamecrafter113"
+  },
+  {
+   "name": "水之冲击",
+   "name_en": "Hydroshock",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Jackal",
+   "sid": "StrawberryJam2021/4-Expert/Jackal"
+  },
+  {
+   "name": "浮 点",
+   "name_en": "FLOATING POINT",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "KAERRA",
+   "sid": "StrawberryJam2021/4-Expert/KAERRA"
+  },
+  {
+   "name": "风暴行者",
+   "name_en": "Storm Runner",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "LethargicDoggo",
+   "sid": "StrawberryJam2021/4-Expert/LethargicDoggo"
+  },
+  {
+   "name": "逆 旅",
+   "name_en": "Summit Down-Side",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Linj",
+   "sid": "StrawberryJam2021/4-Expert/Linj"
+  },
+  {
+   "name": "时间谜题",
+   "name_en": "Time Trouble",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Moladan",
+   "sid": "StrawberryJam2021/4-Expert/Moladan"
+  },
+  {
+   "name": "飘渺飞升",
+   "name_en": "Ethereal Ascension",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Quantum Spaceman",
+   "sid": "StrawberryJam2021/4-Expert/QuantumSpaceman"
+  },
+  {
+   "name": "金色走廊",
+   "name_en": "Golden Alleyway",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "RedBoule",
+   "sid": "StrawberryJam2021/4-Expert/RedBoule"
+  },
+  {
+   "name": "图腾花园",
+   "name_en": "Mosaic Garden",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Scroogle",
+   "sid": "StrawberryJam2021/4-Expert/Scroogle"
+  },
+  {
+   "name": "System.InvalidMapException",
+   "name_en": "System.InvalidMapException",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Skunkynator",
+   "sid": "StrawberryJam2021/4-Expert/Skunkynator"
+  },
+  {
+   "name": "雀跃之舞",
+   "name_en": "Caper Cavortion",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Stotch",
+   "sid": "StrawberryJam2021/4-Expert/Stotch"
+  },
+  {
+   "name": "玛德琳：泡泡",
+   "name_en": "Madeline: The Bubble",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Vina",
+   "sid": "StrawberryJam2021/4-Expert/Vina"
+  },
+  {
+   "name": "北极星",
+   "name_en": "Polaris",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Yoshachobi7",
+   "sid": "StrawberryJam2021/4-Expert/Yoshachobi7"
+  },
+  {
+   "name": "杨桃星球",
+   "name_en": "Starfruit Supernova",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/4-Expert/ZZ-HeartSide"
+  },
+  {
+   "name": "飞翔的电池",
+   "name_en": "Flying Battery",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "sunsetquasar",
+   "sid": "StrawberryJam2021/4-Expert/alicequasar"
+  },
+  {
+   "name": "钟 塔",
+   "name_en": "Clockwork",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "fonda1515",
+   "sid": "StrawberryJam2021/4-Expert/fonda1515"
+  },
+  {
+   "name": "等离子反应器",
+   "name_en": "Plasma Reactor",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "HiveMindsRule",
+   "sid": "StrawberryJam2021/4-Expert/hivemindsrule"
+  },
+  {
+   "name": "空洞狭缝",
+   "name_en": "Narrow Hollow",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "!tsabrody",
+   "sid": "StrawberryJam2021/4-Expert/itsabrody"
+  },
+  {
+   "name": "nyan",
+   "name_en": "nyan",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "",
+   "sid": "StrawberryJam2021/4-Expert/nyan"
+  },
+  {
+   "name": "梦醒时分",
+   "name_en": "Hypnagogia",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "pansear",
+   "sid": "StrawberryJam2021/4-Expert/pansear"
+  },
+  {
+   "name": "毫无意义的装置",
+   "name_en": "Meaningless Contraptions",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "PowerAV",
+   "sid": "StrawberryJam2021/4-Expert/powerav"
+  },
+  {
+   "name": "纽 带",
+   "name_en": "Vinculum",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Ru",
+   "sid": "StrawberryJam2021/4-Expert/rdoggo8"
+  },
+  {
+   "name": "月之佛塔",
+   "name_en": "Lunar Pagoda",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "sj2021/4-Expert.png",
+   "collection": "sj2021",
+   "author": "Spirialis",
+   "sid": "StrawberryJam2021/4-Expert/spirialis"
+  },
+  {
+   "name": "野兽之腹",
+   "name_en": "Belly of the Beast",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Aiden",
+   "sid": "StrawberryJam2021/5-Grandmaster/CaptainCarpensir"
+  },
+  {
+   "name": "世界大穴",
+   "name_en": "World Abyss",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "TheDavSmasher",
+   "sid": "StrawberryJam2021/5-Grandmaster/Dav"
+  },
+  {
+   "name": "轮回疯狂 B 面",
+   "name_en": "Cycle Madness B-Side",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "DeathKontrol",
+   "sid": "StrawberryJam2021/5-Grandmaster/DeathKontrol"
+  },
+  {
+   "name": "星空奥德赛",
+   "name_en": "Stellar Odyssey",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Ecl1psed",
+   "sid": "StrawberryJam2021/5-Grandmaster/Ecl1psed"
+  },
+  {
+   "name": "崩碎之歌",
+   "name_en": "Shattersong",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Hydro & more",
+   "sid": "StrawberryJam2021/5-Grandmaster/Hydro"
+  },
+  {
+   "name": "象 牙",
+   "name_en": "Ivory",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Linj",
+   "sid": "StrawberryJam2021/5-Grandmaster/Linj"
+  },
+  {
+   "name": "猩空之穴",
+   "name_en": "Cave of the Crimson Sky",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "RedBatNick",
+   "sid": "StrawberryJam2021/5-Grandmaster/RedBatNick"
+  },
+  {
+   "name": "烈冕号",
+   "name_en": "The Solar Express",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Soloiini",
+   "sid": "StrawberryJam2021/5-Grandmaster/Soloiini"
+  },
+  {
+   "name": "kevintechspam.bin",
+   "name_en": "kevintechspam.bin",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Todd & Cabob",
+   "sid": "StrawberryJam2021/5-Grandmaster/Todd"
+  },
+  {
+   "name": "百香万神殿",
+   "name_en": "Passionfruit Pantheon",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "the Grandmaster Heart Side",
+   "sid": "StrawberryJam2021/5-Grandmaster/ZZ-HeartSide"
+  },
+  {
+   "name": "超光速",
+   "name_en": "Superluminary",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Alisticious",
+   "sid": "StrawberryJam2021/5-Grandmaster/alisticious"
+  },
+  {
+   "name": "74",
+   "name_en": "74",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "fishtank",
+   "sid": "StrawberryJam2021/5-Grandmaster/fishtank"
+  },
+  {
+   "name": "山 顶",
+   "name_en": "summit",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "elio, Soloiini & more",
+   "sid": "StrawberryJam2021/5-Grandmaster/math"
+  },
+  {
+   "name": "弹球炼狱",
+   "name_en": "Pinball Purgatory",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Maya",
+   "sid": "StrawberryJam2021/5-Grandmaster/maya"
+  },
+  {
+   "name": "反转山脊",
+   "name_en": "Flipside Cliffside",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Cookie Monster & Appels",
+   "sid": "StrawberryJam2021/5-Grandmaster/tcookiem"
+  },
+  {
+   "name": "熔岩层",
+   "name_en": "Lava Layer",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "tobyaaa",
+   "sid": "StrawberryJam2021/5-Grandmaster/tobyaaa"
+  },
+  {
+   "name": "荷塘月色",
+   "name_en": "Nelumbo",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "tofu",
+   "sid": "StrawberryJam2021/5-Grandmaster/tofu"
+  },
+  {
+   "name": "漂泊深渊",
+   "name_en": "Drifting Deep",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "xlibiza",
+   "sid": "StrawberryJam2021/5-Grandmaster/xlibiza"
+  },
+  {
+   "name": "破空之虹",
+   "name_en": "Fractured Iridescence",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "sj2021/5-Grandmaster.png",
+   "collection": "sj2021",
+   "author": "Xplosives",
+   "sid": "StrawberryJam2021/5-Grandmaster/xplosives"
+  },
+  {
+   "name": "Heavenly Altitudes",
+   "name_en": "Heavenly Altitudes",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Abby",
+   "sid": "SpringCollab2020/1-Beginner/Abby"
+  },
+  {
+   "name": "Desolate Spire",
+   "name_en": "Desolate Spire",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Bissy",
+   "sid": "SpringCollab2020/1-Beginner/Bissy"
+  },
+  {
+   "name": "Azurite Ascent",
+   "name_en": "Azurite Ascent",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "CANADIAN",
+   "sid": "SpringCollab2020/1-Beginner/CANADIAN"
+  },
+  {
+   "name": "Seeker Temple",
+   "name_en": "Seeker Temple",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Cat_in_Box_01",
+   "sid": "SpringCollab2020/1-Beginner/Cat_in_Box_01"
+  },
+  {
+   "name": "Crystal Enigma",
+   "name_en": "Crystal Enigma",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Cookie",
+   "sid": "SpringCollab2020/1-Beginner/Cookie"
+  },
+  {
+   "name": "Space Jam Fever Dream",
+   "name_en": "Space Jam Fever Dream",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Cruor",
+   "sid": "SpringCollab2020/1-Beginner/Cruor"
+  },
+  {
+   "name": "Electric Stratosphere",
+   "name_en": "Electric Stratosphere",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "DanTKO",
+   "sid": "SpringCollab2020/1-Beginner/DanTKO"
+  },
+  {
+   "name": "Blast Processing",
+   "name_en": "Blast Processing",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Flagpole1up",
+   "sid": "SpringCollab2020/1-Beginner/Flagpole1up"
+  },
+  {
+   "name": "The Singularity",
+   "name_en": "The Singularity",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Ghajestis",
+   "sid": "SpringCollab2020/1-Beginner/Ghajestis"
+  },
+  {
+   "name": "Thoughtful Dreams",
+   "name_en": "Thoughtful Dreams",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "IsaGoodFriend",
+   "sid": "SpringCollab2020/1-Beginner/IsaGoodFriend"
+  },
+  {
+   "name": "Starjump",
+   "name_en": "Starjump",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Lichtbaulb",
+   "sid": "SpringCollab2020/1-Beginner/Lichtbaulb"
+  },
+  {
+   "name": "Heaven's Outer Space",
+   "name_en": "Heaven's Outer Space",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Rue",
+   "sid": "SpringCollab2020/1-Beginner/Rue"
+  },
+  {
+   "name": "Cirque Maderano",
+   "name_en": "Cirque Maderano",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Skeleton",
+   "sid": "SpringCollab2020/1-Beginner/Skeleton"
+  },
+  {
+   "name": "Into the Storm",
+   "name_en": "Into the Storm",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Snas",
+   "sid": "SpringCollab2020/1-Beginner/Snas"
+  },
+  {
+   "name": "Chillout Mountain",
+   "name_en": "Chillout Mountain",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "Thegur90",
+   "sid": "SpringCollab2020/1-Beginner/Thegur90"
+  },
+  {
+   "name": "Beginner Heart Side",
+   "name_en": "Beginner Heart Side",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "the Beginner Mappers",
+   "sid": "SpringCollab2020/1-Beginner/ZZ-HeartSide"
+  },
+  {
+   "name": "Badeline Block Belt",
+   "name_en": "Badeline Block Belt",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "hennyburgr",
+   "sid": "SpringCollab2020/1-Beginner/hennyburgr"
+  },
+  {
+   "name": "Temple of the Kevins",
+   "name_en": "Temple of the Kevins",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "iamdadbod",
+   "sid": "SpringCollab2020/1-Beginner/iamdadbod"
+  },
+  {
+   "name": "Mossy Caverns",
+   "name_en": "Mossy Caverns",
+   "aliases": [],
+   "difficulty": "Beginner",
+   "tags": [],
+   "icon": "spring2020/1-Beginner.png",
+   "collection": "spring2020",
+   "author": "itsabrody",
+   "sid": "SpringCollab2020/1-Beginner/itsabrody"
+  },
+  {
+   "name": "Flooded Waterways",
+   "name_en": "Flooded Waterways",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Bissy",
+   "sid": "SpringCollab2020/2-Intermediate/Bissy"
+  },
+  {
+   "name": "Electrified Resort",
+   "name_en": "Electrified Resort",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Bonicle",
+   "sid": "SpringCollab2020/2-Intermediate/Bonicle"
+  },
+  {
+   "name": "Jots & Scribbles",
+   "name_en": "Jots & Scribbles",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "snowii",
+   "sid": "SpringCollab2020/2-Intermediate/Clover"
+  },
+  {
+   "name": "City of Tears",
+   "name_en": "City of Tears",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Donker19",
+   "sid": "SpringCollab2020/2-Intermediate/Donker19"
+  },
+  {
+   "name": "Dark Side of the Moon",
+   "name_en": "Dark Side of the Moon",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Evilleafy",
+   "sid": "SpringCollab2020/2-Intermediate/Evilleafy"
+  },
+  {
+   "name": "Hot and Cold Cavern",
+   "name_en": "Hot and Cold Cavern",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "GG19",
+   "sid": "SpringCollab2020/2-Intermediate/GG19"
+  },
+  {
+   "name": "Spirit Spire",
+   "name_en": "Spirit Spire",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Goat",
+   "sid": "SpringCollab2020/2-Intermediate/Goat"
+  },
+  {
+   "name": "The Game",
+   "name_en": "The Game",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Hallow",
+   "sid": "SpringCollab2020/2-Intermediate/Hallow"
+  },
+  {
+   "name": "Overgrown City",
+   "name_en": "Overgrown City",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Lichtbaulb",
+   "sid": "SpringCollab2020/2-Intermediate/Lichtbaulb"
+  },
+  {
+   "name": "Sizzling Citadel",
+   "name_en": "Sizzling Citadel",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Noax",
+   "sid": "SpringCollab2020/2-Intermediate/Noax"
+  },
+  {
+   "name": "Claustrophobia",
+   "name_en": "Claustrophobia",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Oppen_heimer",
+   "sid": "SpringCollab2020/2-Intermediate/Oppen_Heimer"
+  },
+  {
+   "name": "Water and Ice",
+   "name_en": "Water and Ice",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "ProXas",
+   "sid": "SpringCollab2020/2-Intermediate/ProXas"
+  },
+  {
+   "name": "Desecration",
+   "name_en": "Desecration",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Rocketguy2",
+   "sid": "SpringCollab2020/2-Intermediate/Rocketguy2"
+  },
+  {
+   "name": "Another Summit",
+   "name_en": "Another Summit",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "SilverStar",
+   "sid": "SpringCollab2020/2-Intermediate/SilverStar"
+  },
+  {
+   "name": "Möbius Temple",
+   "name_en": "Möbius Temple",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Skeleton",
+   "sid": "SpringCollab2020/2-Intermediate/Skeleton"
+  },
+  {
+   "name": "Madelina Jones and the Temple of Zoom",
+   "name_en": "Madelina Jones and the Temple of Zoom",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "TheAdvertisement",
+   "sid": "SpringCollab2020/2-Intermediate/TheAdvertisement"
+  },
+  {
+   "name": "Serene Skydive",
+   "name_en": "Serene Skydive",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "Thegur90",
+   "sid": "SpringCollab2020/2-Intermediate/Thegur90"
+  },
+  {
+   "name": "Intermediate Heart Side",
+   "name_en": "Intermediate Heart Side",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "the Intermediate Mappers",
+   "sid": "SpringCollab2020/2-Intermediate/ZZ-HeartSide"
+  },
+  {
+   "name": "Abandoned and Ruined",
+   "name_en": "Abandoned and Ruined",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "aleph_null",
+   "sid": "SpringCollab2020/2-Intermediate/aleph_null"
+  },
+  {
+   "name": "Ancient Engine",
+   "name_en": "Ancient Engine",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "aridai",
+   "sid": "SpringCollab2020/2-Intermediate/aridai"
+  },
+  {
+   "name": "Circular Platform Clutter",
+   "name_en": "Circular Platform Clutter",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "hennyburgr",
+   "sid": "SpringCollab2020/2-Intermediate/hennyburgr"
+  },
+  {
+   "name": "Stratcour Summit",
+   "name_en": "Stratcour Summit",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "iamdadbod",
+   "sid": "SpringCollab2020/2-Intermediate/iamdadbod"
+  },
+  {
+   "name": "Heavenly",
+   "name_en": "Heavenly",
+   "aliases": [],
+   "difficulty": "Intermediate",
+   "tags": [],
+   "icon": "spring2020/2-Intermediate.png",
+   "collection": "spring2020",
+   "author": "phant",
+   "sid": "SpringCollab2020/2-Intermediate/phant"
+  },
+  {
+   "name": "Satellite",
+   "name_en": "Satellite",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Marshall H",
+   "sid": "SpringCollab2020/3-Advanced/BeefyUncle"
+  },
+  {
+   "name": "Northern Lights",
+   "name_en": "Northern Lights",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Bissy",
+   "sid": "SpringCollab2020/3-Advanced/Bissy"
+  },
+  {
+   "name": "Crimson Night",
+   "name_en": "Crimson Night",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Cookie",
+   "sid": "SpringCollab2020/3-Advanced/Cookie"
+  },
+  {
+   "name": "Space Garden",
+   "name_en": "Space Garden",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Dozing",
+   "sid": "SpringCollab2020/3-Advanced/Dozing"
+  },
+  {
+   "name": "Rhythm Realm",
+   "name_en": "Rhythm Realm",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Ezel",
+   "sid": "SpringCollab2020/3-Advanced/Ezel"
+  },
+  {
+   "name": "Lucid Caverns",
+   "name_en": "Lucid Caverns",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Galaksyz",
+   "sid": "SpringCollab2020/3-Advanced/Galaksyz"
+  },
+  {
+   "name": "The Climb",
+   "name_en": "The Climb",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Holly",
+   "sid": "SpringCollab2020/3-Advanced/Holly"
+  },
+  {
+   "name": "Nice Doppelgänger",
+   "name_en": "Nice Doppelgänger",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "JaThePlayer",
+   "sid": "SpringCollab2020/3-Advanced/JaThePlayer"
+  },
+  {
+   "name": "Mural Skies",
+   "name_en": "Mural Skies",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "LinjKarma",
+   "sid": "SpringCollab2020/3-Advanced/LinjKarma"
+  },
+  {
+   "name": "nyoom",
+   "name_en": "nyoom",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "NeoKat",
+   "sid": "SpringCollab2020/3-Advanced/NeoKat"
+  },
+  {
+   "name": "String",
+   "name_en": "String",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Percussive",
+   "sid": "SpringCollab2020/3-Advanced/Percussive"
+  },
+  {
+   "name": "The Dark Core",
+   "name_en": "The Dark Core",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "RealVet",
+   "sid": "SpringCollab2020/3-Advanced/RealVet"
+  },
+  {
+   "name": "Toxic Sewers",
+   "name_en": "Toxic Sewers",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Rufus",
+   "sid": "SpringCollab2020/3-Advanced/Rufus"
+  },
+  {
+   "name": "Cave-in Cavern",
+   "name_en": "Cave-in Cavern",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "SpoopySoup",
+   "sid": "SpringCollab2020/3-Advanced/Spoopy"
+  },
+  {
+   "name": "Booster in Orbit",
+   "name_en": "Booster in Orbit",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Thegur90",
+   "sid": "SpringCollab2020/3-Advanced/Thegur90"
+  },
+  {
+   "name": "Crumbling Castle",
+   "name_en": "Crumbling Castle",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "Tortoise",
+   "sid": "SpringCollab2020/3-Advanced/Tortoise"
+  },
+  {
+   "name": "Advanced Heart Side",
+   "name_en": "Advanced Heart Side",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "the Advanced Mappers",
+   "sid": "SpringCollab2020/3-Advanced/ZZ-HeartSide"
+  },
+  {
+   "name": "Above Celeste's Peak",
+   "name_en": "Above Celeste's Peak",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "_sleepie",
+   "sid": "SpringCollab2020/3-Advanced/_sleepie"
+  },
+  {
+   "name": "Ferocious Sanctuary",
+   "name_en": "Ferocious Sanctuary",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "iamdadbod",
+   "sid": "SpringCollab2020/3-Advanced/iamdadbod"
+  },
+  {
+   "name": "The Correlation",
+   "name_en": "The Correlation",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "orbittwz",
+   "sid": "SpringCollab2020/3-Advanced/orbittwz"
+  },
+  {
+   "name": "Dreamy Bluffs",
+   "name_en": "Dreamy Bluffs",
+   "aliases": [],
+   "difficulty": "Advanced",
+   "tags": [],
+   "icon": "spring2020/3-Advanced.png",
+   "collection": "spring2020",
+   "author": "taco360",
+   "sid": "SpringCollab2020/3-Advanced/taco360"
+  },
+  {
+   "name": "Starlit Grotto",
+   "name_en": "Starlit Grotto",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Bissy",
+   "sid": "SpringCollab2020/4-Expert/Bissy"
+  },
+  {
+   "name": "Electric Exuberance",
+   "name_en": "Electric Exuberance",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "CANADIAN",
+   "sid": "SpringCollab2020/4-Expert/CANADIAN"
+  },
+  {
+   "name": "Switchback Station",
+   "name_en": "Switchback Station",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "ChaotiC",
+   "sid": "SpringCollab2020/4-Expert/ChaotiC"
+  },
+  {
+   "name": "Cycle Madness",
+   "name_en": "Cycle Madness",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "DeathKontrol",
+   "sid": "SpringCollab2020/4-Expert/DeathKontrol"
+  },
+  {
+   "name": "Watertown",
+   "name_en": "Watertown",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Indecx",
+   "sid": "SpringCollab2020/4-Expert/Indecx"
+  },
+  {
+   "name": "Ligament",
+   "name_en": "Ligament",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Kube",
+   "sid": "SpringCollab2020/4-Expert/Kube"
+  },
+  {
+   "name": "Thunder Temple",
+   "name_en": "Thunder Temple",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "LethargicDoggo",
+   "sid": "SpringCollab2020/4-Expert/LethargicDoggo"
+  },
+  {
+   "name": "Major Malfunction",
+   "name_en": "Major Malfunction",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Minemah",
+   "sid": "SpringCollab2020/4-Expert/Mineman"
+  },
+  {
+   "name": "Trenches of Jellies",
+   "name_en": "Trenches of Jellies",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Mün",
+   "sid": "SpringCollab2020/4-Expert/Mun"
+  },
+  {
+   "name": "High Voltage",
+   "name_en": "High Voltage",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "RadleyMcTuneston",
+   "sid": "SpringCollab2020/4-Expert/RadleyMcTuneston"
+  },
+  {
+   "name": "New Jank City",
+   "name_en": "New Jank City",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Thegur90",
+   "sid": "SpringCollab2020/4-Expert/Thegur90"
+  },
+  {
+   "name": "Expert Heart Side",
+   "name_en": "Expert Heart Side",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "the Expert Mappers",
+   "sid": "SpringCollab2020/4-Expert/ZZ-HeartSide"
+  },
+  {
+   "name": "Blank Dreams",
+   "name_en": "Blank Dreams",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "Zerex",
+   "sid": "SpringCollab2020/4-Expert/Zerex"
+  },
+  {
+   "name": "Ultra Sandwich",
+   "name_en": "Ultra Sandwich",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "dahlukeh",
+   "sid": "SpringCollab2020/4-Expert/dahlukeh"
+  },
+  {
+   "name": "Subterranean Exploration",
+   "name_en": "Subterranean Exploration",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "deskilln",
+   "sid": "SpringCollab2020/4-Expert/deskilln"
+  },
+  {
+   "name": "Olden Tower Ruins",
+   "name_en": "Olden Tower Ruins",
+   "aliases": [],
+   "difficulty": "Expert",
+   "tags": [],
+   "icon": "spring2020/4-Expert.png",
+   "collection": "spring2020",
+   "author": "iamdadbod",
+   "sid": "SpringCollab2020/4-Expert/iamdadbod"
+  },
+  {
+   "name": "Theo Hell",
+   "name_en": "Theo Hell",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "1nkFa1c0n",
+   "sid": "SpringCollab2020/5-Grandmaster/1nkFa1c0n"
+  },
+  {
+   "name": "Crypt of the Kevins",
+   "name_en": "Crypt of the Kevins",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "Bissy",
+   "sid": "SpringCollab2020/5-Grandmaster/Bissy"
+  },
+  {
+   "name": "Ultra Difficult",
+   "name_en": "Ultra Difficult",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "Bob Dole",
+   "sid": "SpringCollab2020/5-Grandmaster/BobDole"
+  },
+  {
+   "name": "Heart of the Storm",
+   "name_en": "Heart of the Storm",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "CANADIAN",
+   "sid": "SpringCollab2020/5-Grandmaster/CANADIAN"
+  },
+  {
+   "name": "Fish Hell",
+   "name_en": "Fish Hell",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "Cyber",
+   "sid": "SpringCollab2020/5-Grandmaster/Cyber"
+  },
+  {
+   "name": "Gem Garden",
+   "name_en": "Gem Garden",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "DeathKontrol",
+   "sid": "SpringCollab2020/5-Grandmaster/DeathKontrol"
+  },
+  {
+   "name": "Error 418",
+   "name_en": "Error 418",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "Hydro0",
+   "sid": "SpringCollab2020/5-Grandmaster/Hydro0"
+  },
+  {
+   "name": "Tripeak Trail",
+   "name_en": "Tripeak Trail",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "Problemstrol",
+   "sid": "SpringCollab2020/5-Grandmaster/Problemstrol"
+  },
+  {
+   "name": "Temporal Tower",
+   "name_en": "Temporal Tower",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "TheDavSmasher",
+   "sid": "SpringCollab2020/5-Grandmaster/TheDavSmasher"
+  },
+  {
+   "name": "TheHeck90",
+   "name_en": "TheHeck90",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "Thegur90",
+   "sid": "SpringCollab2020/5-Grandmaster/Thegur90"
+  },
+  {
+   "name": "Old Grandmaster Heart Side",
+   "name_en": "Old Grandmaster Heart Side",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "the Grandmaster Mappers",
+   "sid": "SpringCollab2020/5-Grandmaster/ZZ-HeartSide"
+  },
+  {
+   "name": "Grandmaster Heart Side",
+   "name_en": "Grandmaster Heart Side",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [
+    "红心面"
+   ],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "the Grandmaster Mappers",
+   "sid": "SpringCollab2020/5-Grandmaster/ZZ-NewHeartSide"
+  },
+  {
+   "name": "Aquatic Underground",
+   "name_en": "Aquatic Underground",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "dog",
+   "sid": "SpringCollab2020/5-Grandmaster/dog"
+  },
+  {
+   "name": "KoKoDoKo?",
+   "name_en": "KoKoDoKo?",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "fishtank_overflow",
+   "sid": "SpringCollab2020/5-Grandmaster/fishtank_overflow"
+  },
+  {
+   "name": "Forest of the Ancients",
+   "name_en": "Forest of the Ancients",
+   "aliases": [],
+   "difficulty": "Grandmaster",
+   "tags": [],
+   "icon": "spring2020/5-Grandmaster.png",
+   "collection": "spring2020",
+   "author": "iamdadbod",
+   "sid": "SpringCollab2020/5-Grandmaster/iamdadbod"
+  },
+  {
+   "name": "钻蓝山巅",
+   "name_en": "Sapphire Summit",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Banana 23",
+   "sid": "WinterCollab2021/1-Maps/Banana23"
+  },
+  {
+   "name": "湛蓝风暴",
+   "name_en": "Sapphiretissimo",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Banana 23/mintx",
+   "sid": "WinterCollab2021/1-Maps/Banana23_mintx"
+  },
+  {
+   "name": "水晶矿场",
+   "name_en": "Crystal Quarry",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Bissy",
+   "sid": "WinterCollab2021/1-Maps/Bissy"
+  },
+  {
+   "name": "绚烂石窟",
+   "name_en": "Opalescent Caverns",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Bissy/Indecx",
+   "sid": "WinterCollab2021/1-Maps/Bissy_Indecx"
+  },
+  {
+   "name": "动量圣地",
+   "name_en": "Momentum Sanctuary",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/Cabob.png",
+   "collection": "winter2021",
+   "author": "Cabob",
+   "sid": "WinterCollab2021/1-Maps/Cabob"
+  },
+  {
+   "name": "月面飞升",
+   "name_en": "Lunar Ascension",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/Cabob_OkNano.png",
+   "collection": "winter2021",
+   "author": "Cabob/OkNano",
+   "sid": "WinterCollab2021/1-Maps/Cabob_OkNano"
+  },
+  {
+   "name": "空中花园",
+   "name_en": "Garden in the Sky",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "CarelessAnonymous",
+   "sid": "WinterCollab2021/1-Maps/CarelessAnonymous"
+  },
+  {
+   "name": "飓风庭院",
+   "name_en": "Storm Garden",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "CarelessAnonymous/AliceQuasar",
+   "sid": "WinterCollab2021/1-Maps/CarelessAnonymous_Marcossanches"
+  },
+  {
+   "name": "折跃礁滩",
+   "name_en": "Portal Reef",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "DanTKO",
+   "sid": "WinterCollab2021/1-Maps/DanTKO"
+  },
+  {
+   "name": "曲流海湾",
+   "name_en": "Warped Bay",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "DanTKO/Viv",
+   "sid": "WinterCollab2021/1-Maps/DanTKO_Viv"
+  },
+  {
+   "name": "芝士再见",
+   "name_en": "Cheese Farewell (With Extra Cheese)",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Donker19",
+   "sid": "WinterCollab2021/1-Maps/Donker19"
+  },
+  {
+   "name": "奶酪王国",
+   "name_en": "Cheesecake Country",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Donker19/RamenTwig",
+   "sid": "WinterCollab2021/1-Maps/Donker19_RamenTwig"
+  },
+  {
+   "name": "废弃矿洞",
+   "name_en": "Abandoned Mines",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Indecx",
+   "sid": "WinterCollab2021/1-Maps/Indecx"
+  },
+  {
+   "name": "星舰遗迹",
+   "name_en": "Starship Ruins",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/Jackal.png",
+   "collection": "winter2021",
+   "author": "Jackal",
+   "sid": "WinterCollab2021/1-Maps/Jackal"
+  },
+  {
+   "name": "混沌领域",
+   "name_en": "Chaos Complex",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/Jackal_KAERRA.png",
+   "collection": "winter2021",
+   "author": "Jackal/KAERRA",
+   "sid": "WinterCollab2021/1-Maps/Jackal_KAERRA"
+  },
+  {
+   "name": "未来设施",
+   "name_en": "FORWARD FACILITY",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "KAERRA",
+   "sid": "WinterCollab2021/1-Maps/KAERRA"
+  },
+  {
+   "name": "凛冽寒风",
+   "name_en": "Frigid Storm",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "AliceQuasar",
+   "sid": "WinterCollab2021/1-Maps/Marcossanches"
+  },
+  {
+   "name": "及月高塔",
+   "name_en": "Tower of the Moon",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "OkNano",
+   "sid": "WinterCollab2021/1-Maps/OkNano"
+  },
+  {
+   "name": "糖果峭壁",
+   "name_en": "Candy Cliffs",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "RamenTwig",
+   "sid": "WinterCollab2021/1-Maps/RamenTwig"
+  },
+  {
+   "name": "扭曲迷途",
+   "name_en": "Distorted",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "Viv",
+   "sid": "WinterCollab2021/1-Maps/Viv"
+  },
+  {
+   "name": "冬游融合终面",
+   "name_en": "Winter Collab Fusion Side",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [
+    "红心面"
+   ],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "",
+   "sid": "WinterCollab2021/1-Maps/ZZ-HeartSide"
+  },
+  {
+   "name": "终天狂岚",
+   "name_en": "Tempestissimo",
+   "aliases": [],
+   "difficulty": null,
+   "tags": [],
+   "icon": "winter2021/default.png",
+   "collection": "winter2021",
+   "author": "mintx",
+   "sid": "WinterCollab2021/1-Maps/mintx"
+  }
+ ]
+}
